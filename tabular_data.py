@@ -7,11 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1mteM69Uu65gpBCFFpbW63T-166I7hZtD
 """
 
-! pip install kaggle
-! mkdir dataset
-! pip install --upgrade --force-reinstall --no-deps kaggle
-!pip install tf-nightly-gpu==2.8.0.dev20211106
-
 # Commented out IPython magic to ensure Python compatibility.
 # data processing
 import numpy as np
@@ -48,7 +43,7 @@ data_1 = pd.read_csv('house.csv', index_col='Id').replace(to_replace=np.nan, val
 cols = ["OverallQual","GrLivArea","GarageCars","GarageArea","TotalBsmtSF","FullBath","YearBuilt","YearRemodAdd",
          "LotFrontage","MSSubClass", "SalePrice"]
 data_1 = data_1[cols]
-data_2 = pd.read_csv('winequality-red.csv').replace(to_replace=np.nan, value=0)
+# data_2 = pd.read_csv('winequality-red.csv').replace(to_replace=np.nan, value=0)
 data_3 = pd.read_csv('bodyfat.csv')
 data = data_0
 variance = []
